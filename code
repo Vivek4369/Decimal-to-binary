@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+void func(int n);
+
+int main()
+{
+    int n;
+    printf("Enter the positive integer :\n");
+    scanf("%d",&n);
+
+    if(n>=0);
+    func(n);
+
+    return 0;
+}
+
+void func(int n)
+{
+    int i=0,a;
+    int S[28];
+
+    a=n;
+    while(a)
+    {
+        S[i++] = a % 2;
+        a = a / 2;
+    }
+
+    for(a=i-1; a>=0;a--){
+        printf("%d",S[a]);
+    }
+}
